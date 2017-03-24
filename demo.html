@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XMP Javascript Library Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>XMP Parser</h1>
+        </div>
+
+        <div class="panel panel-default" id="input">
+            <div class="panel-heading">Input</div>
+            <div class="panel-body">
+                <p>Select a file below to extract the XMP meta-data:</p>
+                <div>
+                    <input type="file" accept="application/pdf" />
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-info" id="output">
+            <div class="panel-heading">Output</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#tabtns" aria-controls="tabtns" role="tab" data-toggle="tab">Thumbnails</a></li>
+                    <li role="presentation"><a href="#tabxml" aria-controls="tabxml" role="tab" data-toggle="tab">Raw XML</a></li>
+                </ul>
+                <br />
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="tabtns">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tabxml">
+                        <pre id="xml"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dist/xmp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>
